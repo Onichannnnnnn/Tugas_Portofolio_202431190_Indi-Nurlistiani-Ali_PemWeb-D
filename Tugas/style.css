@@ -1,0 +1,296 @@
+/* Styling Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fdedf9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------------------ */
+/* Header dan Navigasi (Konsisten di semua halaman) */
+/* ------------------------------------------------------------------ */
+header {
+    background: #fca6fc; /* Warna utama ITPLN (?) atau gelap */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #3498db; /* Warna aksen */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1.logo {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+    background-color: #3498db;
+}
+
+/* ------------------------------------------------------------------ */
+/* Main Content Section Styling */
+/* ------------------------------------------------------------------ */
+main {
+    padding: 20px 0;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Home/Beranda (index.html) */
+/* ------------------------------------------------------------------ */
+
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ecf0f1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #fca6fc;
+}
+
+/* Skills Section - Progress Bar */
+.skill-item {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #fca6fc;
+    height: 100%;
+    text-align: right;
+    color: white;
+    line-height: 20px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* ------------------------------------------------------------------ */
+/* Portofolio (portfolio.html) - Tabel Responsif */
+/* ------------------------------------------------------------------ */
+.table-wrapper {
+    overflow-x: auto; /* Membuat tabel bisa di-scroll horizontal di layar kecil */
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 600px; /* Minimal lebar tabel untuk mencegah kerusakan */
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #fca6fc;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ------------------------------------------------------------------ */
+/* Kontak/Formulir (contact.html) - Responsif dan User-Friendly */
+/* ------------------------------------------------------------------ */
+.responsive-form {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #fca6fc;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical; /* Memungkinkan textarea diubah ukurannya secara vertikal */
+}
+
+/* Styling Checkbox dan Radio Button Groups */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column; /* Stack vertikal di mobile secara default */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.radio-group label, .checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.radio-group input, .checkbox-group input {
+    margin-right: 10px;
+    /* Reset width untuk input radio/checkbox */
+    width: auto; 
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #fca6fc;
+}
+
+/* ------------------------------------------------------------------ */
+/* Footer (Konsisten di semua halaman) */
+/* ------------------------------------------------------------------ */
+footer {
+    background: #fca6fc;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive Web Design (RWD) menggunakan Media Queries */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+    /* Navbar stack di mobile */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header nav {
+        margin-top: 10px;
+    }
+
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    /* Hero content di mobile */
+    .hero {
+        padding: 20px 10px;
+    }
+    
+    /* Tabel sudah ditangani dengan overflow-x: auto pada .table-wrapper */
+}
+
+/* RWD untuk Radio/Checkbox Group (di desktop bisa horizontal, di mobile stack) */
+@media (min-width: 600px) {
+    .radio-group, .checkbox-group {
+        flex-direction: row; /* Berjajar horizontal di layar lebih besar */
+        flex-wrap: wrap; /* Jika terlalu banyak pilihan, akan wrap */
+        gap: 20px;
+    }
+}
