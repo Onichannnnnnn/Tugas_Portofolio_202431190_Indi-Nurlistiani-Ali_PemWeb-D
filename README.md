@@ -3,7 +3,7 @@
 > Repositori ini menampilkan portofolio yang berisi koleksi proyek dan karya terbaru yang saya kerjakan. Tujuan saya adalah menunjukkan kemampuan teknis, proses berpikir, dan hasil kerja.
 
 ---
-🔗 
+🔗 https://onichannnnnnn.github.io/202431190_Indi-Nurlistiani_Ali_Tugas_Portofolio/
 
 ---
 🌟 Tentang Proyek Ini
